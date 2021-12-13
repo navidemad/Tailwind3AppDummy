@@ -82,7 +82,7 @@ paths.forEach((entrypoint) => {
           build.onResolve(
             { filter: /app\/assets\/stylesheets.*scss/ },
             (args) => {
-              console.log(`Compiling ${args.path}`);
+              compilationStarting(args.path);
             }
           );
         },
